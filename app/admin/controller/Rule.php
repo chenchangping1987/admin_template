@@ -15,7 +15,7 @@ class Rule extends BasicApi
      * @throws \think\db\exception\DbException
      * @throws \think\db\exception\ModelNotFoundException
      */
-    public function rule_add()
+    public function ruleAdd()
     {
         // 验证字段
         $this->checkValidate();
@@ -31,13 +31,45 @@ class Rule extends BasicApi
         }
     }
 
-    public function rule_edit()
+    /**
+     * 编辑规则
+     */
+    public function ruleEdit()
     {
         // 验证字段
         $this->checkValidate();
-        if ( !$this->params['id'] ){
+        // 数据id
+        if ( !$this->params['id']??null ){
             $this->error('参数异常');
         }
+
+        // 数据是否存在
+        if (!Rules::find($this->params['id'])){
+            $this->error('数据异常2');
+        }
+
+        // 更新数据
+        if(Rules::update($this->params)){
+            $this->success('更新成功');
+        }
+
+        $this->error('更新失败');
+    }
+
+    /**
+     * 规则删除
+     */
+    public function ruleDelete()
+    {
+        if (!$this->params['id']??null){
+            $this->error('数据异常');
+        }
+
+        if(Rules::where('id', $this->params['id'])->delete()){
+            $this->success('删除成功');
+        }
+
+        $this->error('删除失败');
     }
 
     /**
@@ -51,7 +83,7 @@ class Rule extends BasicApi
             'rule_path' => 'require',
         ],[
             'rule_name.require' => '规则名称必填',
-            'rule_path.require' => '规则名称必填',
+            'rule_path.require' => '规则路径必填',
         ]);
     }
 }
