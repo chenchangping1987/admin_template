@@ -11,3 +11,8 @@ Route::post('menu_add', 'Menu/menuAdd')->name('menu_add');
 Route::post('rule_add', 'Rule/ruleAdd')->name('rule_add');
 Route::post('rule_edit', 'Rule/ruleEdit')->name('rule_edit');
 Route::post('rule_del', 'Rule/ruleDelete')->name('rule_del');
+
+// 角色
+Route::post('role_add', 'Role/roleAdd')->name('role_add');
+Route::post('role_edit', 'Role/roleEdit')->name('role_edit');
+Route::post('role_del', 'Role/roleDelete')->name('role_del');
