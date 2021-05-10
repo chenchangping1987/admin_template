@@ -9,7 +9,7 @@ use app\common\controller\BasicService;
 
 class LoginService extends BasicService
 {
-    public static function loginAction()
+    public function loginAction()
     {
 
     }

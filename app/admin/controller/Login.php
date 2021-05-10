@@ -35,7 +35,7 @@ class Login extends BasicApi
         }
 
         // 验证用户密码是否正确
-        if ( !password_verify($this->params['password'], $users->password) ){
+        if ( !password_verify(env('adminusers.prefix') . $this->params['password'], $users->password) ){
             $this->error('密码不正确');
         }
 

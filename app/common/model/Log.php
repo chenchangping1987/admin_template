@@ -10,6 +10,12 @@ use think\Model;
 class Log extends Model
 {
     /**
+     * 绑定数据表
+     * @var string
+     */
+    protected $table = 'logs';
+
+    /**
      * 日志信息
      * @var
      */

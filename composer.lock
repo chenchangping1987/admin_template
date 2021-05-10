@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18d2ce909bf81522cc76b6e59a9df913",
+    "content-hash": "77b129a60e0f2a6f2e4c2500b7ced0fe",
     "packages": [
         {
             "name": "casbin/casbin",
@@ -1845,5 +1845,5 @@
         "php": ">=7.1.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
