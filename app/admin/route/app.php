@@ -20,5 +20,9 @@ Route::post('role_del', 'Role/roleDelete')->name('role_del');
 // 权限
 Route::post('permissions_add', 'Permissions/add')->name('permissions_add');
 
+// 管理员
+Route::post('user_add', 'Users/add')->name('user_add');
+Route::post('user_edit', 'Users/edit')->name('user_edit');
+
 // 测试路由
 Route::post('test', 'Test/index')->name('test');

@@ -1,5 +1,8 @@
 <?php
 // 全局中间件定义文件
+
+use app\middleware\LoginMiddle;
+
 return [
     // 全局请求缓存
     // \think\middleware\CheckRequestCache::class,
@@ -7,4 +10,7 @@ return [
     // \think\middleware\LoadLangPack::class,
     // Session初始化
     // \think\middleware\SessionInit::class
+
+    // 是否登陆
+    // [\app\middleware\LoginMiddle::class, 'users'],
 ];

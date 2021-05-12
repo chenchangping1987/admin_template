@@ -35,7 +35,7 @@ class BasicApi extends BaseController
      */
     public function initialize()
     {
-        parent::initialize();
+        // parent::initialize();
 
         // 获取token信息
         $this->token = $_SERVER['HTTP_TOKEN']??null;

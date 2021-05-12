@@ -9,7 +9,7 @@ class Test extends BasicApi
 {
     public function index()
     {
-        dump(env('adminusers.prefix'));
+        // dump(env('adminusers.prefix'));
         // $this->adminAdd();
     }
 
