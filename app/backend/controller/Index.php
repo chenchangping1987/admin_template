@@ -10,6 +10,6 @@ class Index extends BaseController
 {
     public function index()
     {
-        return 111;
+        return view();
     }
 }
