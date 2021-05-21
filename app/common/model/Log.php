@@ -13,7 +13,7 @@ class Log extends Model
      * 绑定数据表
      * @var string
      */
-    protected $table = 'logs';
+    protected $table = 'admin_logs';
 
     /**
      * 日志信息
