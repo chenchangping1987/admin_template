@@ -4,9 +4,7 @@
 namespace app\backend\controller;
 
 
-use app\BaseController;
-
-class Index extends BaseController
+class Index extends Base
 {
     public function index()
     {
