@@ -9,6 +9,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.6.8/css/layui.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- icheck bootstrap -->
@@ -81,9 +83,20 @@
 <!-- AdminLTE App -->
 <script src="/static/dist/js/adminlte.min.js"></script>
 
+<script src="https://www.layuicdn.com/layui-v2.6.8/layui.js"></script>
+
+
 <script type="text/javascript">
+    // layui加载
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+    });
+
 
     $('.login-action').click(function(){
+
         var username = $('.username').val();
         var password = $('.password').val();
 
@@ -91,7 +104,14 @@
             type: 'POST',
             data: {username:username,password:password},
             success:function(res){
-                console.log(res);
+                if(res.code == 1){
+                    layer.msg(res.message,{type:1,time: 1000},function(){
+                        window.location.href = 'index';
+                    });
+                }
+                if ( res.code == 0 ){
+                    layer.msg(res.message);
+                }
             }
         });
     });

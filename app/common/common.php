@@ -1,5 +1,8 @@
 <?php
 
+use think\exception\HttpResponseException;
+use think\Response;
+
 
 /**
  * 设置配置

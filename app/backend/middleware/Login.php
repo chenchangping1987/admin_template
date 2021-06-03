@@ -11,10 +11,10 @@ class Login
 {
     public function handle(Request $request, \Closure $next)
     {
-        $users = Cache::get('admin_users');
-        if ( !$users ){
-            return redirect('backend/login');
-        }
+        // $users = Cache::get('admin_users');
+        // if ( !$users ){
+        //     return redirect('/backend/login');
+        // }
 
         return $next($request);
     }

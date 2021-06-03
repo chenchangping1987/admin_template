@@ -5,7 +5,7 @@ namespace app\api\controller;
 
 
 use app\api\model\Users;
-use app\BasicApi;
+use app\common\controller\BasicApi;
 
 class Index extends BasicApi
 {
