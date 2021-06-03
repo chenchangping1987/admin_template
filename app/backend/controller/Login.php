@@ -7,6 +7,7 @@ namespace app\backend\controller;
 use app\BaseController;
 use app\common\model\Users as UsersModel;
 use think\facade\Cache;
+use think\facade\Session;
 use think\Request;
 
 class Login extends BaseController
@@ -54,7 +55,8 @@ class Login extends BaseController
             error('用户名或者密码错误');
         }
 
-        Cache::set('admin_users', $users);
+        session('admin_users', $users);
+
         success('登陆成功');
     }
 }
