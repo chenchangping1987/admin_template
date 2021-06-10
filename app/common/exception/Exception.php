@@ -28,7 +28,7 @@ class Exception extends Handle
             Log::create(['info'=>$e->getMessage(),'ip'=>request()->ip()]);
             $result = [
                 'code' => 0,
-                'message' => '数据异常1',//$e->getMessage(),
+                'message' => $e->getMessage(),
                 'data' => new \stdClass(),
                 'time' => time()
             ];

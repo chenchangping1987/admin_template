@@ -10,7 +10,6 @@ class Login
 {
     public function handle(Request $request, \Closure $next)
     {
-        dd(session('admin_users'));
         $users = session('admin_users');
         if ( !$users ){
             return redirect('/backend/login');

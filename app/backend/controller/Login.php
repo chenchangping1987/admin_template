@@ -6,8 +6,6 @@ namespace app\backend\controller;
 
 use app\BaseController;
 use app\common\model\Users as UsersModel;
-use think\facade\Cache;
-use think\facade\Session;
 use think\Request;
 
 class Login extends BaseController
